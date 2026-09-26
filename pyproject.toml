@@ -1,0 +1,23 @@
+[project]
+name = "asia-travel-mcp"
+version = "0.1.0"
+description = "MCP server letting AI agents discover, book and manage Asia hotel & activity bookings"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp<2",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
